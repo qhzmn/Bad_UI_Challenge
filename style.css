@@ -1,0 +1,117 @@
+/* Corps général */
+body {
+    background: linear-gradient(45deg, #ff00ff, #00ff00, #0000ff);
+    font-family: 'Comic Sans MS', sans-serif;
+    color: #ffff00;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-y: scroll; /* Permet le défilement vertical */
+    transition: background-color 0.5s ease; /* Animation de changement de couleur */
+}
+
+/* Texte qui tremble */
+.trembling-text {
+    animation: tremble 0.1s infinite;
+}
+
+@keyframes tremble {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-2px, 2px); }
+}
+
+/* Boutons interactifs */
+.nav-button {
+    background-color: #ff4500;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-button:hover {
+    background-color: #ffd700;
+}
+
+/* Explosion visuelle */
+.explosion {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, red, yellow, transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: explode 0.5s ease-out;
+    z-index: 9999;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Secousse (shake) */
+.shake {
+    animation: shake-animation 0.3s ease;
+}
+
+@keyframes shake-animation {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Rotation */
+.rotate {
+    animation: rotate-animation 0.3s ease;
+}
+
+@keyframes rotate-animation {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Sections */
+.section {
+    padding: 20px;
+    display: none; /* Sections cachées par défaut */
+}
+
+.section:not(.hidden) {
+    display: block; /* Affichée lorsqu'elle est active */
+}
+
+/* Bouton retour avec mouvement circulaire */
+.return-button {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: circular-move 5s linear infinite;
+}
+
+@keyframes circular-move {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}}

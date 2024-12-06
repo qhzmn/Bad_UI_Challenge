@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Écologie Chaotique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Curseur personnalisé -->
+    <div class="custom-cursor"></div>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Écologie Chaotique</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-list">
+            <li><button class="nav-button" onclick="showSection('accueil')">Accueil</button></li>
+            <li><button class="nav-button" onclick="showSection('articles')">Articles</button></li>
+            <li><button class="nav-button" onclick="showSection('contact')">Contact</button></li>
+        </ul>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="section">
+        <h2 class="trembling-text">Bienvenue sur Écologie Chaotique</h2>
+        <p>
+            Découvrez un espace unique dédié à l'information et à la sensibilisation sur des problématiques environnementales. 
+            Nous vous présentons des faits fascinants sur la nature, des articles éducatifs, et des moyens d'agir pour protéger notre planète.
+        </p>
+        <p>
+            Explorez notre site pour en apprendre davantage sur les merveilles de la biodiversité et les défis écologiques auxquels nous faisons face.
+            Ensemble, nous pouvons faire la différence !
+        </p>
+    </section>
+
+    <!-- Section Articles -->
+    <section id="articles" class="section hidden">
+        <h2 class="trembling-text">Articles Fascinants</h2>
+        <article>
+            <h3>5 Faits Incroyables sur l'Écologie</h3>
+            <p>La nature est pleine de surprises. Voici cinq faits étonnants qui montrent l'importance de préserver notre environnement :</p>
+            <ul>
+                <li><strong>Les récifs coralliens :</strong> Ils abritent 25 % de la biodiversité marine, bien qu'ils ne couvrent que 1 % de la surface océanique mondiale.</li>
+                <li><strong>Les mangroves :</strong> Ces écosystèmes côtiers stockent jusqu'à 10 fois plus de carbone par hectare que les forêts terrestres.</li>
+                <li><strong>Un arbre mature :</strong> Il peut absorber jusqu'à 48 livres de CO2 chaque année et libérer de l'oxygène suffisant pour deux personnes.</li>
+                <li><strong>Les océans :</strong> Ils absorbent environ 25 % des émissions de CO2 produites par l'humanité, atténuant ainsi les effets du changement climatique.</li>
+                <li><strong>Les abeilles :</strong> Responsables de la pollinisation de 70 % de nos cultures, elles jouent un rôle crucial dans notre sécurité alimentaire.</li>
+            </ul>
+            <p>
+                En protégeant ces écosystèmes et en adoptant des pratiques durables, nous contribuons à préserver la planète pour les générations futures.
+            </p>
+        </article>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section hidden">
+        <h2 class="trembling-text">Contactez-nous</h2>
+        <p>
+            Vous avez des questions ou souhaitez en savoir plus ? N'hésitez pas à nous contacter ! Remplissez le formulaire ci-dessous, et nous reviendrons vers vous dès que possible.
+        </p>
+        <form id="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required><br><br>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse email" required><br><br>
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="5" cols="30" placeholder="Votre message" required></textarea><br><br>
+            <button type="submit" id="submit-button">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Écologie Chaotique. Ensemble pour la planète.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
